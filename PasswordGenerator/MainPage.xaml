@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             BackgroundColor="#222"
+             x:Class="PasswordGenerator.MainPage">
+            
+    <StackLayout VerticalOptions="Center" >
+        <Label HorizontalOptions="CenterAndExpand" Text="Password Generator" FontSize="26" ></Label>
+        <StackLayout Padding="20">
+            <Label Text="Options:" TextColor="#222" FontSize="Large"></Label>
+            <FlexLayout Margin="20,0" >
+                <!-- Numbers -->
+                <CheckBox x:Name="checkbox_numbers" IsChecked="True" ></CheckBox>
+                <Label FontSize="Body" Margin="0,5" TextColor="#fff" Text="Numbers"></Label>
+                <!-- Letters-->
+                <CheckBox x:Name="checkbox_letters" IsChecked="True" ></CheckBox>
+                <Label FontSize="Body" Margin="0,5" TextColor="#fff" Text="Letters"></Label>
+                <!-- Special Chars-->
+                <CheckBox x:Name="checkbox_special_chars" IsChecked="True" ></CheckBox>
+                <Label FontSize="Body" Margin="0,5" TextColor="#fff" Text="Special Chars"></Label>
+            </FlexLayout>
+
+            <FlexLayout Margin="20,0" >
+                <!-- Random Size Chars -->
+                <CheckBox x:Name="checkbox_random_size" IsChecked="True" ></CheckBox>
+                <Label FontSize="Body" Margin="0,5" TextColor="#fff" Text="Random Chars Size"></Label>
+                <!-- Random Words -->
+                <CheckBox x:Name="checkbox_random_words" IsChecked="True" ></CheckBox>
+                <Label FontSize="Body" Margin="0,5" TextColor="#fff" Text="Random Words"></Label>
+            </FlexLayout>
+
+            <StackLayout Padding="20,0">
+                <Label FontSize="Body" Margin="0,5" TextColor="#fff" Text="Password Lenght:"></Label>
+                <Entry TextColor="#fff" x:Name="entry_password_lenght" FontSize="Body"></Entry>
+                <Button Text="Create New Password" Clicked="Button_Clicked" ></Button>
+                <Entry TextColor="#fff" x:Name="entry_new_password" IsEnabled="False"></Entry>
+            </StackLayout>
+
+        </StackLayout>
+    </StackLayout>
+</ContentPage>
